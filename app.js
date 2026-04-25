@@ -9,9 +9,9 @@ const typingIndicator = document.getElementById('typing-indicator');
 const typingName = document.getElementById('typing-name');
 const modalMessage = document.getElementById('modal-message');
 
-// The dummy "system" API key to test the fallback logic. 
-// Since this is fake, it will fail and prompt for the user's key.
-const SYSTEM_API_KEY = "AIzaSy_SYSTEM_API_KEY_PLACEHOLDER"; 
+// The default system API key provided by the developer.
+// If this runs out of tokens, it will fallback to asking the user for their key.
+const SYSTEM_API_KEY = "AIzaSyCTn824CUgeRmOrZonr-j_tacKeSgLTX1g"; 
 let userApiKey = localStorage.getItem('gemini_api_key');
 let activeApiKey = null;
 
