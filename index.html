@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overthinker Group Chat</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="api-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Welcome to Overthinker Simulator</h2>
+            <p id="modal-message">Please enter your Gemini API Key to continue. Your key is stored locally in your browser.</p>
+            <input type="password" id="api-key-input" placeholder="AIzaSy...">
+            <button id="save-api-key">Save & Start</button>
+        </div>
+    </div>
+
+    <div class="chat-container">
+        <header>
+            <div class="header-info">
+                <div class="avatar-group">
+                    <div class="avatar bg-red">😬</div>
+                    <div class="avatar bg-gray">😐</div>
+                    <div class="avatar bg-green">😎</div>
+                </div>
+                <div>
+                    <h1>The Brain Trust</h1>
+                    <p>3 participants</p>
+                </div>
+            </div>
+            <button id="settings-btn" title="API Settings">⚙️</button>
+        </header>
+        
+        <main id="chat-box">
+            <div class="message system">
+                <div class="bubble">Welcome! Tell the group what you're overthinking right now. We'll help you break it down.</div>
+            </div>
+        </main>
+        
+        <div id="typing-indicator" class="hidden">
+            <span id="typing-name">Someone</span> is typing<span class="dots">...</span>
+        </div>
+
+        <footer>
+            <input type="text" id="user-input" placeholder="Type your worry here..." autocomplete="off">
+            <button id="send-btn" title="Send">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+        </footer>
+    </div>
+    
+    <!-- Markdown Parser for nice formatting -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
